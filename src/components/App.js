@@ -10,12 +10,10 @@ class App extends React.Component {
     const { dispatch } = this.props
 
     dispatch(handleInitialData())
-
-    store.subscribe(() => this.forceUpdate())
   }
   render() {
 
-    if (this.props.loading == true) {
+    if (this.props.loading === true) {
       return <h3>Loading</h3>
     }
 

@@ -17,7 +17,7 @@ function removeGoal(id) {
   }
 }
 
-function handleAddGoal(name, callback) {
+export function handleAddGoal(name, callback) {
   return (dispatch) => {
     return API.saveGoal(name)
       .then((goal) => {
@@ -29,7 +29,7 @@ function handleAddGoal(name, callback) {
   }
 }
 
-function handleDeleteGoal(goal) {
+export function handleDeleteGoal(goal) {
   return (dispatch) => {
     dispatch(removeGoal(goal.id))
 
